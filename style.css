@@ -56,7 +56,8 @@
 .header{
     background-image: url(images/developer.png), url(images/header_bg.png);
     background-repeat: no-repeat;
-    background-position: top left, bottom right;
+    background-size: contain, auto;
+    background-position:left, bottom right;
     background-color: #FFF8F3;
 }
 
@@ -207,4 +208,129 @@ main{
 }
 .download-cv-button{
     margin: 50px 0 100px 0;
+}
+
+/* small device media query  */
+@media screen and (max-width:576px) {
+    .header{
+        background-image: none;
+    }
+    nav{
+        flex-direction: column;
+    }
+    .banner{
+        margin: 10px;
+        flex-direction: column-reverse;
+    }
+    .banner-img{
+      
+    max-width: 100%;
+    }
+    .banner-greeting{
+        font-size: 30px;
+    }
+    .banner-title{
+    font-size: 50px;
+    }
+
+    /* about section  */
+    .about{
+        margin-top: 60px;
+        padding: 10px;
+
+    }
+    .about-items{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    /* what i do section  */
+    .what-i-do{
+        margin: 60px 10px 10px 10px;
+        padding: 0;
+        
+    }
+    .skills{
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 20px;
+        text-align: center;
+        padding: 30px;
+    }
+    .skill{
+        margin: 0;
+    }
+    .skill-title{
+        padding: 0;
+    }
+    /* resume section  */
+    .resume-container{
+        flex-direction: column;
+        padding: 30px;
+    }
+    .resume-column-title{
+        text-align: center;
+    }
+    .download-cv-button{
+        margin: 0 0 50px 0
+        
+    }
+    
+}
+/* media query for medium device */
+@media screen and (min-width:576px) and (max-width:992px) {
+    .header{
+        background-size: contain, 60%;
+        background-position: left , right bottom ;
+    }
+
+    .banner{
+        margin-left: 10%;
+    }
+    .banner-img{
+      
+    max-width: 50%;
+    }
+    .banner-greeting{
+        font-size: 30px;
+    }
+    .banner-title{
+    font-size: 50px;
+    }
+    /* about section  */
+    .about{
+        margin-top: 60px;
+        padding: 10%;
+    }
+
+    /* what i do section  */
+    .what-i-do{
+        padding: 60px 20px 20px 20px;
+    }
+
+    .skills{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-top: 30px;
+        
+    }
+    .skill{
+        margin-top: 0;
+    }
+    /* resume section  */
+    .resume{
+        margin-top: 60px;
+    }
+    .resume-container{
+        padding: 0 30px;
+    }
+    .experience-title{
+        font-size: 20px;
+    }
+    .download-cv-button{
+        margin: 30px 0 50px 0
+        
+    }
+    
 }
